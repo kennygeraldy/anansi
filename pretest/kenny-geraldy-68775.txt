@@ -1,0 +1,43 @@
+1. C
+2. C
+3. B
+4. B
+5. D
+
+1. False
+2. True
+3. False
+4. True
+5. False
+
+1. Kotlin memiliki kode yang lebih mudah dibaca dan tepat sehingga memudahkan pemahaman program. Null safe, tidak membutuhkan getter dan setter untuk mengambil data. kotlin dpt menggunakan beberapa fitur yang dimiliki java.
+2. Val digunakan pada variabel yang tidak akan pernah berubah sedangkan kita menggunakan var pada variable yang dapat di reassign atau diubah.
+3. Null safety adalah sebuah fitur yang di design kotlin untuk mengurangi resiko null.
+4. when pada kotlin  dapat digunakan sebagai bentuk switch case statement yang ada pada java.
+5. DI mempermudah testing dengan membolehkan sistem untuk membuat mocking atau stubbing dari dependensi yang ad pada hard coding. 
+6. kotlin functions lebih simpel dan singkat dibandingkan dengan java.
+7. pada kotlin higher order function adalah ketika sebuah fungsi dapat menerima fungsi lain sebagai parameter dan dapat mengembalikan fungsi tersebut. lamdas digunakan pada kotlin sebagai pengganti parameter.
+8. MVVM atau model view view model membantu dalam membedakan aplikasi bisnis dengan logic yang dimiliki dari sisi user interface sehingga dapat memaintain  hubungan yang clear antara logic dengan ui.
+9. bertanggung jawab untuk menconvert data object dari model sehongga data tersebut dapat dengan mudah digunakan.
+10. Live data memberikan notifikasi kepada observer objek ketika adanya perubahan data.
+11. Kotlin menyediakan sintaks yang ringkas dan ekspresif sehingga pekerjaan dapat bekerja dengan mudah.
+12. Kotlin menghilangkan penggunaan sintaks tambahan seperti titik koma untuk memisahkan ekspresi dalam definisi loop—menjadikan struktur kode yang rapi dan mudah dibaca.
+13. Kotlin mensupport type interfensi dengan bantuan kompiler yang dimilikinya secara otomatis mengidentifikasi tipe data variabel. Kompiler mengetahui hal ini melalui penginisialisasi. Jadi jika Anda menginisialisasi nilai pada deklarasi, Anda tidak perlu mendefinisikan tipe datanya secara eksplisit.
+14. Enkapsulasi adalah prinsip dalam pemrograman berorientasi objek (OOP) yang menyembunyikan detail implementasi dan hanya menampilkan informasi yang dibutuhkan oleh pengguna. Ini membantu menjaga data dan metode internal objek agar tidak diakses secara langsung dari luar kelas, serta meningkatkan keamanan dan modularitas.
+15. Data binding dalam pola MVVM (Model-View-ViewModel) memungkinkan pengikatan antara elemen UI (View) dengan data yang ada di ViewModel. Tujuannya adalah untuk memperbarui UI secara otomatis ketika data di ViewModel berubah tanpa harus menulis kode manual untuk memperbarui tampilan. Dengan data binding, perubahan data langsung tercermin di UI, yang membuat kode lebih bersih dan mudah dikelola.
+16. Repositori dalam arsitektur MVVM berfungsi sebagai perantara antara ViewModel dan sumber data, seperti API atau database lokal. Ini memisahkan logika akses data dari ViewModel dan memungkinkan pengelolaan data yang lebih baik. Repositori juga membuat kode lebih modular, memudahkan pengujian, serta memungkinkan penggantian sumber data dengan lebih mudah (misalnya, mengganti API dengan database lokal atau sebaliknya).
+17. Kotlin menawarkan beberapa manfaat bagi pengembang Android, di antaranya:
+- Null Safety: Kotlin memiliki fitur bawaan untuk menangani null pointer exception, sehingga mengurangi potensi crash aplikasi.
+- Sintaks yang ringkas: Kotlin memiliki sintaks yang lebih sederhana dan bersih dibandingkan Java, sehingga meningkatkan produktivitas pengembang.
+- Interoperabilitas dengan Java: Kotlin dapat bekerja bersama kode Java, sehingga pengembang bisa mengintegrasikan Kotlin secara bertahap ke dalam proyek Android yang sudah ada.
+- Coroutines: Kotlin mendukung coroutines yang mempermudah penanganan operasi asynchronous.
+18. Koin adalah framework dependency injection yang ringan dan mudah digunakan di Kotlin. untuk mengimplementasikannya kita harus,
+- Tambahkan dependensi Koin ke dalam file build.gradle.
+- Buat modul Koin untuk mendefinisikan bagaimana dependensi akan diinisialisasi.
+- Mulai Koin di aplikasi dengan memanggil startKoin.
+- Inject dependensi di kelas-kelas yang membutuhkan dengan menggunakan by inject().
+19 Constructor injection memberikan keuntungan diantara lain sebagai berikut,
+- Immutability: Dependency yang diinisialisasi melalui constructor tidak bisa diubah setelah objek dibuat, yang mendukung prinsip immutability.
+- Clear dependencies: Dengan constructor injection, semua dependensi objek terlihat jelas di konstruktor, sehingga lebih mudah dimengerti dan diuji.
+- Testability: Constructor injection lebih ramah terhadap pengujian unit karena dependensi dapat dengan mudah diganti menggunakan mock atau stub saat pengujian.
+20. Kotlin secara eksplisit membedakan antara tipe nullable dan non-nullable. Di Kotlin, tipe yang bisa null ditandai dengan tanda ?, sedangkan tipe non-nullable tidak bisa bernilai null. Dengan demikian, null pointer exception lebih jarang terjadi, karena Kotlin memaksa pengembang untuk secara eksplisit menangani kemungkinan nilai null dengan mekanisme seperti safe call (?.), elvis operator (?:), atau not-null assertion (!!). 
