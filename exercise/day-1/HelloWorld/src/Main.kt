@@ -1,13 +1,22 @@
 fun main() {
-    val units = 250
+    var secretNumber = 7;
+    val guess = arrayOf(5, 3, 7, 0)
+    var index = 0;
 
-    val charge = when {
-        units <= 100 -> units * 1.0
-        units in 101..200 -> (100 * 1.0) + ((units - 100) * 1.5)
-        units > 200 -> (100 * 1.0) + (100 * 1.5) + ((units - 200) * 2.0)
-        else ->
-            println("Insert the correct units")
+    while (index < guess.size) {
+        val guess = guess[index]
+
+        if (guess == 0) {
+            println("Kesempatan menebak kamu sudah berakhir.")
+            break
+        }
+
+        if (guess == secretNumber) {
+            println("Selamat kamu berhasil menebak secret numbernya: $secretNumber")
+            break
+        } else {
+            println("tebakan mu adalah $guess, Kamu masih belum beruntung, coba lagi.")
+        }
+    index++
     }
-
-    println("Total electricity bill: $$charge")
 }
