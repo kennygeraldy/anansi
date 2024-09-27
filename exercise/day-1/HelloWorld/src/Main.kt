@@ -1,18 +1,16 @@
 fun main() {
-    var score = arrayOf(50, 65,75,85,95);
-    for (x in score) {
-        if (x >= 90) {
-            println("Score = A")
-        } else if (x >= 80 && x < 90) {
-            println("Score = B")
-        }else if (x >= 70 && x < 80) {
-            println("Score = C")
-        }else if (x >= 60 && x < 69) {
-            println("Score = D")
-        }else if (x < 60) {
-            println("Score = F")
-        } else if(x < 0 || x > 100){
-            println("Insert valid score;")
+    val salaries = 1000000;
+    val duration = 6;
+
+    val bonus = when {
+        duration > 5 -> salaries * 0.20
+        duration == 2 || duration == 5 -> salaries * 0.10
+        duration < 10 -> salaries.toDouble()
+        else -> {
+            println("No Bonuses")
+            0.0
         }
     }
+
+    println("Bonus: $bonus")
 }
