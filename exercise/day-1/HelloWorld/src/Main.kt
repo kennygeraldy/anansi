@@ -17,6 +17,6 @@ fun main() {
         } else {
             println("tebakan mu adalah $guess, Kamu masih belum beruntung, coba lagi.")
         }
-    index++
+        index++
     }
 }
