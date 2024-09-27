@@ -11,7 +11,7 @@ fun main() {
             println("Score = D")
         }else if (x < 60) {
             println("Score = F")
-        } else {
+        } else if(x < 0 || x > 100){
             println("Insert valid score;")
         }
     }
