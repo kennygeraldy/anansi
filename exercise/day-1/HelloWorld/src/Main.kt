@@ -1,16 +1,19 @@
 fun main() {
-    val salaries = 1000000;
-    val duration = 6;
+    val spent = 200;
 
-    val bonus = when {
-        duration > 5 -> salaries * 0.20
-        duration == 2 || duration == 5 -> salaries * 0.10
-        duration < 10 -> salaries.toDouble()
+    val discount = when {
+        spent > 200 -> spent * 0.30
+        spent > 100 && spent <= 200 -> spent * 0.20
+        spent == 200 -> spent * 0.20
+        spent == 50 && spent <= 100 -> spent * 0.10
+        spent == 100 -> spent * 0.10
+        spent < 50 -> spent.toDouble()
         else -> {
             println("No Bonuses")
             0.0
         }
     }
 
-    println("Bonus: $bonus")
+    val finalPrice = spent - discount;
+    println("Final price: $finalPrice")
 }
