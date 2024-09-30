@@ -1,15 +1,16 @@
-fun main() {
-    var litter = 0;
+val availableSeats = arrayOf(1, 2, 3, 4, 5)
 
-    while (litter < 50) {
-       if(litter > 40) {
-           println("Full mas "+litter);
-           break
-       } else {
-           println(litter)
-           litter += 5;
-       }
+fun reserveSeat(name: String, seatNumber: Int) {
+    if (seatNumber in availableSeats) {
+        val reservedSeat = availableSeats.indexOf(seatNumber)
+        availableSeats[reservedSeat] = 0
+        println("$name reserved seat $seatNumber.")
+    } else {
+        println("Seat $seatNumber is already reserved.")
     }
-    println("total tanki  yang dimiliki adalah " +litter)
 }
 
+fun main() {
+    reserveSeat("John", 2)
+    reserveSeat("Sarah", 2)
+}
