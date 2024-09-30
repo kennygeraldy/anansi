@@ -28,8 +28,8 @@
 19. Yes
 20. Yes
 
-21. Var x = "Hello";
-    Var x = "World";
+21. var x = "Hello";
+    x = "World";
 
 22.  fun sum(a: Int, b: Int): 
 Int {
