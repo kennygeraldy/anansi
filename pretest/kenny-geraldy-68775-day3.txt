@@ -1,0 +1,48 @@
+1. B
+2. B
+3. C
+4. C
+5. C
+
+6. Perbedaannya adalah ukuran dari list of tidak bisa berubah, sedangkan mutableListOf dapat berubah sizenya.
+7.  onStop() dipanggil ketika aktivitas tidak lagi terlihat oleh pengguna. Pada tahap ini, aktivitas masih ada dalam memori, tetapi tidak sedang ditampilkan di layar. Sedangkan onDestroy() dipanggil ketika aktivitas sedang dihancurkan sepenuhnya, baik karena pengguna keluar dari aktivitas, sistem menghancurkan aplikasi untuk menghemat memori, atau karena pemanggilan manual seperti finish().
+8. Coroutine ringan dan efisien serta dapat digunakan untuk melakukan banyak operasi bersamaan dengan overhead minimal.
+9. 
+- Jaga konteksnya
+- Gunakan arsitektur umum untuk proyek Android, seperti Arsitektur Clean, ViewModel, atau UseCase. ...
+- Delegasikan referensi ke DI dan masukkan referensi terkait konteks.
+10. 
+View adalah elemen dasar di Android yang mewakili komponen UI tunggal, seperti tombol, teks, atau gambar.
+ViewGroup adalah subclass dari View yang dapat menampung beberapa elemen View lainnya.
+11.
+RecyclerView menggunakan konsep "ViewHolder" yang mendaur ulang item UI untuk mengurangi penggunaan memori, serta mendukung tata letak yang lebih fleksibel, seperti tata letak grid atau tata letak horizontal.
+ListView adalah komponen UI yang digunakan untuk menampilkan daftar item dalam satu kolom secara vertikal.
+12. onResume() biasanya digunakan untuk melanjutkan interaksi atau fungsi yang sebelumnya dihentikan sementara di onPause().
+13. launch digunakan untuk memulai coroutine baru tanpa menunggu hasilnya. Coroutine yang dijalankan dengan launch berjalan secara asinkron dan tidak mengembalikan nilai.
+14. LiveData adalah komponen yang digunakan untuk menyimpan data yang dapat diamati, yang dirancang agar UI tetap sinkron dengan data. LiveData akan secara otomatis memperbarui UI jika ada perubahan pada data yang diamati.
+15. ViewModel digunakan untuk memisahkan logika bisnis dari logika UI dan menjaga data tetap tersedia meskipun UI dihancurkan dan dibuat ulang.
+
+16. No
+17. Yes
+18. No
+19. Yes
+20. Yes
+
+21. val myList = mutableListOf(1, 2, 3)
+    myList.add(4)
+
+22.  suspend fun myCoroutine() {
+        delay(1000L)
+        println("Coroutine executed")
+    }
+
+23. gak tau
+
+24. val map = mutableMapOf(1 to "One", 2 to "Two")
+    map[3] = "Three"
+    
+25. gak tau
+
+Story Answer
+gak tau
+
