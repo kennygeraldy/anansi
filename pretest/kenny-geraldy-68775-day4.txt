@@ -1,0 +1,83 @@
+1. B
+2. B
+3. B
+4. C
+5. B
+
+6.
+listOf() digunakan untuk membuat list yang tidak bisa diubah (immutable), artinya elemen-elemennya tidak dapat ditambah atau dihapus setelah pembuatan. Sedangkan mutableListOf() digunakan untuk membuat list yang bisa diubah (mutable), yang memungkinkan penambahan, penghapusan, atau perubahan elemen setelah list dibuat.
+7.Coroutine dapat ditangguhkan (suspend) dengan menggunakan fungsi yang memiliki modifier suspend. Fungsi-fungsi seperti delay() juga dapat menangguhkan coroutine tanpa memblokir thread yang sedang berjalan.
+8. Metode onPause() dipanggil saat aktivitas tidak lagi berada di latar depan tetapi masih terlihat sebagian (misalnya, ketika ada jendela lain di depan aktivitas). Pada titik ini, aplikasi harus menyimpan data penting karena aktivitas mungkin dihentikan atau dihancurkan setelahnya.
+9. RecyclerView lebih efisien dibandingkan ListView karena menggunakan konsep ViewHolder untuk mendaur ulang (recycle) tampilan item yang tidak lagi terlihat, kemudian lebih fleksibel.
+10. Room menyederhanakan akses data dengan menyediakan API yang kuat dan memastikan keamanan akses data melalui pemeriksaan kueri saat kompilasi.
+11. Retrofit menyederhanakan permintaan jaringan dengan menyediakan interface API yang mengkonversi endpoint HTTP menjadi metode Kotlin/Java, serta secara otomatis menangani serialisasi dan deserialisasi JSON menggunakan library seperti Gson atau Moshi.
+12. onCreate() digunakan untuk inisialisasi aktivitas saat pertama kali dibuat
+13. LiveData adalah komponen arsitektur Android yang menyediakan objek pengamat (observer) yang bersifat lifecycle-aware. Ini memungkinkan antarmuka pengguna untuk mendengarkan perubahan data secara reaktif dan hanya diperbarui saat komponen terkait (seperti aktivitas atau fragment) berada dalam status aktif.
+14. Untuk menangani rotasi layar tanpa kehilangan data, Anda dapat menggunakan berbagai teknik, seperti menyimpan data di ViewModel, menggunakan onSaveInstanceState(), atau menandai aktivitas dengan android:configChanges di file manifest agar tidak dihancurkan dan dibuat ulang saat terjadi perubahan konfigurasi seperti rotasi layar.
+15. 
+Ringan: Coroutine lebih ringan daripada thread, sehingga aplikasi dapat menangani banyak coroutine tanpa overhead besar.
+Non-blocking: Coroutines tidak memblokir thread saat melakukan tugas asinkron.
+Sederhana: Coroutine membuat kode asynchronous lebih mudah dibaca dan ditulis karena mengikuti gaya pemrograman yang mirip dengan kode sinkron.
+Kontrol lebih baik: Coroutine lebih mudah dikelola dan dikontrol, terutama dalam hal pembatalan atau timeout.
+
+16. False
+17. True
+18. True
+19. True
+20. True
+
+21. val myList = mutableListOf(1, 2, 3)
+    myList.add(4)
+
+22. gak ada yang salah
+
+23.  val map = mutableMapOf(1 to "One", 2 to "Two")
+     map[3] = "Three"
+
+24.val intent = Intent(this, SecondActivity::class.java)
+    startActivity(intent)
+
+25. val view = findViewById<Button>(R.id.myButton)
+    view.setOnClickListener {
+    Toast.makeText(this, "Button clicked", Toast.LENGTH_SHORT).show()
+}
+
+26. fun add(a: Int, b: Int): Int {
+    return a + b
+}
+
+val result = add(5, 10)
+
+
+27. override fun onSaveInstanceState(outState: Bundle) {
+    super.onSaveInstanceState(outState) 
+    outState.putInt("KEY", 1)
+}
+
+override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+    super.onRestoreInstanceState(savedInstanceState) 
+    val key = savedInstanceState.getInt("KEY") 
+}
+
+28. val textView = findViewById<TextView>(R.id.textView)
+    textView.text = getString(R.string.app_name)
+
+29.val job = GlobalScope.async {
+    delay(1000L)
+    "Hello"
+}
+
+val result = runBlocking { job.await() 
+} 
+
+
+30. fun networkRequest() {
+    val url = URL("https://example.com")
+    val connection = url.openConnection() as HttpURLConnection
+    connection.requestMethod = "POST" 
+    connection.connect() 
+    connection.disconnect() 
+}
+
+Story Question
+Gak tau
