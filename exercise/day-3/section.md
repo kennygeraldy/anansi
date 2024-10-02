@@ -61,6 +61,11 @@
 - **Input**: Two `EditText` fields for height (in meters) and weight (in kilograms).
 - **Output**: Display the calculated BMI in a `TextView`.
 - **Bonus**: Display the BMI category (Underweight, Normal, Overweight, Obese).
+  BMI	Weight Status
+  Below 18.5	Underweight
+  18.5—24.9	Healthy Weight
+  25.0—29.9	Overweight
+  30.0 and Above	Obesity
 
 #### Instructions:
 - Add two `EditText` fields to input height and weight.
