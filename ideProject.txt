@@ -1,0 +1,70 @@
+Nama Kelompok: Pecinta kotlin
+By: Kenny, Bram, dan Zul
+
+Project Idea
+1. Training App: 
+Login -> pengguna wajib login terlebih dahulu untuk bisa mengakses halaman home
+Fragment Home > Overall information dan jenis latihan
+Fragment Dashboard- -> mengandung list latihan-latihan dengan filter(dengan dropdown) yang mana ketika di klik akan menampilkan konten video dan deskripsi
+
+2. Language Learning App:
+Log-in
+Home > Kelas Apa yang diikuti atau yang disarankan untuk pemula
+Dalam kelas ada video E-Learning
+Setiap buka kelas nanti ada overview tentang kelas tersebut
+Profile Page -> Informasi umum tentang pengguna nama lengkap, email, dsb
+Ada aktivitas quiz pilihan ganda disetiap coursenya
+Fragment (Home - Kelas-kelas yang tersedia dan bisa diikuti, My Course - Course-Course yang sedang diambil, Profile and Setting)
+
+3. Apartment Rent App
+Login -> pengguna wajib login terlebih dahulu untuk bisa mengakses halaman home
+Home -> terdapat beberapa list apartemen favorit
+Cari Apartment -> muncul, daftar kota kota dijakarta, jika di klik salah satu kota, memunculkan list apartemen di kota tersebut
+Setiap apartemennya kalau di klik dapat menampilkan lokasi, dan video lingkungan dan/atau kamar apartemen
+Setiap apartemen bisa pilih kamar dengan harga yang berbeda (menggunakan radio button)
+Memiliki tombol booking (toggle, kalau di klik, tombol jadi berwarna abu abu, menandakan kalau sudah di booking)
+Profile -> berisikan nama,email dan apartemen yang disewa
+
+
+4.Recipe Sharing  and Cooking tips
+Login:
+Pengguna wajib login untuk mengakses fitur utama aplikasi.
+Home:
+Halaman utama menampilkan berbagai resep masakan populer dan rekomendasi harian. Ada filter berdasarkan diet (vegan, keto, gluten-free), atau tingkat kesulitan.
+Recipe Page:
+Setiap resep berisi video tutorial memasak, bahan-bahan, dan langkah-langkah memasak. 
+Profile:
+Menampilkan informasi umum pengguna,
+
+5. Travel Vlog App:
+Login:
+Pengguna wajib login untuk mengakses konten video perjalanan.
+Home:
+Halaman utama menampilkan video vlog perjalanan terbaru dari berbagai destinasi. Pengguna dapat mencari video berdasarkan lokasi atau jenis perjalanan (petualangan, kuliner, budaya).
+Travel Videos:
+Setiap video vlog mencakup pengalaman perjalanan, tips tempat wisata, dan rekomendasi tempat makan. Terdapat deskripsi yang menjelaskan lebih lanjut tentang perjalanan yang dilakukan.
+Profile:
+Menampilkan informasi pengguna dan daftar video perjalanan yang telah dibookmark.
+
+6. FIMA 2.0
+Aplikasi Absensi adalah solusi digital yang dirancang untuk mempermudah pengelolaan kehadiran karyawan di suatu organisasi. 
+Halaman Pertama:
+Berisikan Informasi Waktu, dan Cuaca Hari tersebut di bagian atas.Rekap waktu clock in dan clock out. Dibawahnya berisikan rekap rangkuman absensi (On Time, Early Leave, Absent, Late Come). Nanti ada button Clock In/ Clock Out dan Pengajuan Izin.
+Ketika di klik button clock in/clock out akan diarah kan ke Page Absensi
+
+Halaman Kedua:
+Absesi menggunakan foto, mengambil informasi waktu, terus mengambil lokasi saat ini dan submit button.
+
+Halaman ketiga (Pengajuan Izin/ Cuti): Mirip Registration Form
+Input Waktu mulai dan akhir, Alasan, dsb.
+
+Halaman Keempat:
+Profil aja: Nama, Departemen, Supervisor, Location Kantor. 
+
+Fitur
+Rangkuman Kehadiran
+Jumlah Hari Kerja
+Input Izin
+Pengajuan Cuti
+Absensi masukkan foto, dan akan ada pengambilan lokasi
+Selain itu ada fitur cuaca 
