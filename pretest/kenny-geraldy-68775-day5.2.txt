@@ -1,0 +1,45 @@
+1. A
+2. B
+3. B
+4. B
+5. B
+
+1. True
+2. True
+3. False
+4. True
+5. True
+
+1. ujuan dari RecyclerView di Android adalah untuk memberikan cara yang fleksibel dan efisien untuk menampilkan kumpulan data besar dalam format daftar yang dapat diloop.
+2. Using <Button> dalam file xml. 
+<Button
+    android:id="@+id/button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Click Me" />
+
+3. Linear layout digunakan untuk membuat konten dalam format yg simpel antara vertical maupun horizontal sedangkan constraint membolehkan kita untuk mengatur komponen view secara fleksibel.
+4. <ProgressBar
+    android:id="@+id/progressBar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+5. checkbox membolehkan user untuk memilih lebih dari 1 jawaban atau selected itmes.
+
+1.  <ImageView
+         android:id="@+id/imageView"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:src="@drawable/sample_image" />
+
+2. <Button
+         android:id="@+id/button"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Press Me" />
+
+3. <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
