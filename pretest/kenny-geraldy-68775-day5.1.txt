@@ -1,0 +1,35 @@
+1. D
+2. B
+3. A
+4. C
+5. B
+
+1. False
+2. True
+3. False
+4. True
+5. False
+
+1. onPause() dipanggil ketika aktivitas kehilangan fokus, tetapi masih dapat terlihat sebagian di layar. Sedangkan onStop() dipanggil ketika aktivitas tidak lagi terlihat sama sekali di layar. 
+2.Kita bisa menggunakan metode putExtra() untuk menambahkan data ke dalam intent, dan kemudian memanggil startActivity() untuk memulai activity yang dituju. dan pada activity yang dituju kita dapat menggunakan getIntent()
+3. onSaveInstance membantu kita dalam menyimpan activity  yang sedang kita lakukan dan tampilan yang sedang kita lihat ketika aplikasi tersebut dihentikan.
+4. onPause() dipanggil terlebih dahulu, karena aktivitas kehilangan fokus dan mulai dihentikan. Kemudian,
+onStop() dipanggil ketika aktivitas tidak lagi terlihat di layar. dan terakhir onDestroy() dipanggil jika aktivitas dihapus dari memori dan benar-benar dihancurkan. Ini terjadi karena back button menandakan bahwa pengguna ingin keluar dari aktivitas tersebut sepenuhnya.
+5. kita bisa menggunakan metode startActivityForResult() untuk memulai aktivitas baru dan menunggu hasil dari aktivitas tersebut. Hasilnya kemudian akan diproses di metode onActivityResult() di aktivitas asal.
+
+1. 
+val intent = Intent(this, MainActivity::class.java)
+startActivity(intent)
+
+alasan code tidak berfungsi dikarenakan fungsi start activity harus di declare terlebih dahulu. kemudian baru variabel yang di declare di panggil. Kedua method start activity harus berada di dalam sebuah function untuk berfungsi.
+
+2. override fun onCreate(savedInstanceState: Bundle) {
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_main)
+}
+
+
+3.  override fun onDestroy() {
+    super.onDestroy()
+    
+}
