@@ -1,0 +1,37 @@
+1. B
+2. A
+3. B
+4. B
+5. D
+
+1. False
+2. False
+3. True
+4. False
+5. True
+
+1. apply() menyimpan data secara asinkron tanpa mengembalikan nilai, sedangkan commit() menyimpan data secara sinkron dan mengembalikan nilai boolean yang menunjukkan keberhasilan penyimpanan.
+2. Mengambil instance SharedPreferences kemudian,  Menyimpan perubahan secara asinkron. Gunakan editor.commit() jika ingin menyimpan secara sinkron.
+3. Dapatkan Instance dari SharedPreferences, kemudian baca data setelah instace didapatkan
+4. Sederhana dan Mudah Digunakan: API untuk Shared Preferences cukup sederhana dan mudah digunakan, membuatnya cocok untuk pengembang pemula.
+
+Kinerja Tinggi: Untuk data kecil, Shared Preferences memiliki kinerja yang lebih baik dibandingkan dengan database atau penyimpanan file, karena hanya melibatkan pembacaan dan penulisan data dalam format sederhana.
+
+Penyimpanan Kunci-Nilai: Shared Preferences menyimpan data dalam format kunci-nilai, yang membuatnya mudah untuk mengelola dan mengakses data tanpa harus menggunakan query kompleks.
+
+Berkinerja Ringan: Memerlukan lebih sedikit overhead dibandingkan dengan database SQLite atau penyimpanan file besar.
+5. Ya, tetapi dalam mengubah Shared Preferences harus berhati-hati dikarenakan tidak secara otomatis thread-safe.
+
+1.val sharedPref = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
+val editor = sharedPref.edit()
+editor.putString("username", "JohnDoe")
+editor.apply()
+
+2. val sharedPref = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+val username = sharedPref.getString("username", "defaultName")
+
+3. val editor = sharedPref.edit()
+editor.remove("key")
+editor.apply() 
+
+

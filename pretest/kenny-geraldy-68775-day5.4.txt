@@ -1,0 +1,38 @@
+1. B
+2. B
+3. B
+4. E
+5. A
+
+1. True
+2. False
+3. True
+4. False
+5. False
+
+1. GsonConverterFactory digunakan dalam Retrofit untuk mengonversi data JSON menjadi objek Java/Kotlin dan sebaliknya. Dengan menggunakan GsonConverterFactory, Kita dapat dengan mudah mengelola proses serialisasi dan deserialisasi, sehingga kita dapat mengelola bentuk objek dalam format JSON mentah
+2. Definisikan antarmuka API, Buat instance Retrofit, Panggil metode API secara asinkron
+3. Panggilan Sinkron: Metode panggilan akan memblokir thread saat menunggu respons dari server. Sedangkan Panggilan Asinkron: Metode panggilan tidak memblokir thread.
+4. mengirim parameter kueri ke metode API Retrofit dengan menggunakan anotasi @Query
+5. Penanganan kesalahan di Retrofit biasanya dilakukan dalam metode onFailure() dari callback saat menggunakan panggilan asinkron. Dalam hal ini, jika ada kesalahan saat melakukan permintaan, seperti kesalahan jaringan atau kesalahan saat mengonversi respons, metode ini akan dipanggil. Diluar dari itu kita juga dapat menggunakan onResponse untuk menghandling berdasarkan response.
+
+1. @GET("users")
+fun getUsers(): Call<List<User>>
+
+2.val credentials = mapOf("username" to "your_username", "password" to "your_password")
+val response = loginUser(credentials)
+
+3.getUserById(123).enqueue(object : Callback<User> {
+    override fun onResponse(call: Call<User>, response: Response<User>) {
+        if (response.isSuccessful) {
+            val user = response.body()
+        }
+    }
+
+    override fun onFailure(call: Call<User>, t: Throwable) {
+    
+    }
+})
+
+
+

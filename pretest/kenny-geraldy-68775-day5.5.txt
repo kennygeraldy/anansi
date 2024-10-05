@@ -1,0 +1,101 @@
+1. C
+2. C
+3. A
+4. B
+5. B
+
+1. False
+2. False
+3. True
+4. True
+5. False
+
+1. 
+    private lateinit var mediaPlayer: MediaPlayer
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        mediaPlayer = MediaPlayer()
+
+        try {
+            // Load audio from raw resources
+            mediaPlayer.setDataSource(this, Uri.parse("android.resource://${packageName}/raw/audio"))
+            mediaPlayer.prepareAsync() 
+
+            mediaPlayer.setOnPreparedListener {
+                mediaPlayer.start() 
+            }
+
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+
+        mediaPlayer.setOnCompletionListener {
+            mediaPlayer.release()
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        if (this::mediaPlayer.isInitialized) {
+            mediaPlayer.release()
+        }
+    }
+
+
+2.val videoView: VideoView = findViewById(R.id.videoView)
+
+val uri = Uri.parse("android.resource://${packageName}/${R.raw.video}")
+videoView.setVideoURI(uri)
+
+videoView.start()
+
+
+3.
+ private lateinit var currentPhotoPath: String
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        captureImage()
+    }
+
+    private fun captureImage() {
+        val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        val photoFile: File? = try {
+            createImageFile()
+        } catch (ex: IOException) {
+            null
+        }
+
+        photoFile?.also {
+            val photoURI: Uri = Uri.fromFile(it)
+            intent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI)
+            startActivityForResult(intent, REQUEST_IMAGE_CAPTURE)
+        }
+    }
+
+    @Throws(IOException::class)
+    private fun createImageFile(): File {
+        val timeStamp: String = SimpleDateFormat("yyyyMMdd_HHmmss").format(Date())
+        val storageDir: File? = getExternalFilesDir(null)
+        return File.createTempFile(
+            "JPEG_$timeStamp_",
+            ".jpg",
+            storageDir
+        ).apply {
+            currentPhotoPath = absolutePath
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+        
+        }
+    }
+
+    companion object {
+        const val REQUEST_IMAGE_CAPTURE = 1
+    }
